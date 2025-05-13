@@ -1,0 +1,79 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1163350",
+      "name": "电话",
+      "font_class": "dianhua",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "3819716",
+      "name": "专业知识技能",
+      "font_class": "zhuanyezhishijineng",
+      "unicode": "e7b6",
+      "unicode_decimal": 59318
+    },
+    {
+      "icon_id": "3826856",
+      "name": "自我评价",
+      "font_class": "ziwopingjia",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "3854306",
+      "name": "证书",
+      "font_class": "huojiang",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    },
+    {
+      "icon_id": "4552970",
+      "name": "邮箱",
+      "font_class": "youxiang",
+      "unicode": "e908",
+      "unicode_decimal": 59656
+    },
+    {
+      "icon_id": "4670121",
+      "name": "教育",
+      "font_class": "jiaoyu",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "6070653",
+      "name": "实习经历",
+      "font_class": "shixijingli",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "6265099",
+      "name": "简历",
+      "font_class": "resume-line",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "17605462",
+      "name": "地址",
+      "font_class": "dizhi",
+      "unicode": "e814",
+      "unicode_decimal": 59412
+    },
+    {
+      "icon_id": "18170354",
+      "name": "日历,日期",
+      "font_class": "calendar-v2",
+      "unicode": "e9aa",
+      "unicode_decimal": 59818
+    }
+  ]
+}

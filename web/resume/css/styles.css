@@ -1,0 +1,459 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+       
+body{
+    background-color: rgb(230, 230, 230);
+    
+    clear: both;
+    overflow: scroll;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 10%;
+}
+
+.head{
+
+    background-color: rgb(255, 255, 255);
+    height: 240px;
+    color: white;
+    overflow: hidden;
+    margin-top: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.head .head{
+    height: 30px;
+    background-color: white;
+    color: black;
+    margin-top: 3px;
+    margin-bottom: 3px;
+
+}
+.head .head span{
+    margin-left: 10px;
+    color: rgb(39, 78, 136);
+    font-size: 150%;
+    font-weight: 600;
+
+}
+.head .head .count{
+    align-content: center;
+    margin-right: 20px;
+    width: auto;
+    float: right;
+    color: rgb(39, 78, 136);
+    font-size: 150%;
+    font-weight: 600;
+}
+
+.head .head .change{
+    align-content: center;
+    margin-right: 20px;
+    float: right;
+    width: 50px;
+    color: rgb(39, 78, 136);
+    font-size: 130%;
+    font-weight: 600;
+    border-radius: 10px;
+    border: rgba(0,0,0,0.1) solid 1px;
+    background-color: rgb(248, 248, 248);
+}
+
+.head .head .change:hover{
+    margin-right: 20px;
+    float: right;
+    width: 50px;
+    color: rgb(39, 78, 136);
+    font-size: 130%;
+    font-weight: 600;
+    border-radius: 10px;
+    border: rgba(0,0,0,0.3) solid 1px;
+    background-color: rgb(227, 227, 227);
+}
+
+.head .left-right{
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    background-color: rgb(39, 78, 136);
+    border-radius: 0;
+}
+.head .left-right .left{
+    
+    float: left;
+    width: calc(100% - 220px);   
+    height: 200px;
+    padding-left: 10px;
+    padding-right: 5px;
+
+}
+.head .left-right .left .name{
+    margin-top: 10px;
+    margin-left: 20px;
+    
+    font-weight: 400;
+    font-size: 200%;
+    display: inline-block;
+
+}
+.head .left-right .left .position{
+    margin: 10px 10px 10px 260px;
+
+    font-weight: 400;
+    font-size: 150%;
+    display: inline-block;
+
+}
+.head .left-right .left .xiaobiao{
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 50%;
+    height: 120px;
+    display: block;
+}
+.head .left-right .left .xiaobiao span{
+    line-height: 30px;
+    font-weight: 300;
+    font-size: 100%;
+    margin-right: 10px;
+    width: 300px;
+    height: 30px;
+    display: block;
+}
+
+.head .left-right .left .kuozhan{
+    float: right;
+    margin-top: 10px;
+    height: 120px;
+    width: 50%;
+    background-color: rgb(39, 78, 136);
+    padding: 0;
+}
+.head .left-right .left .kuozhan .weather{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    color: black;
+    background-color: rgb(248, 248, 248);
+}
+.head .left-right .left .kuozhan .weather .weather-head{
+    width: 100%;
+    height: 30px;
+    color: rgb(21, 15, 97);
+    text-align: center;
+    font-size: 140%;
+    font-weight: 500;
+    background-color: rgb(225, 225, 225);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.head .left-right .left .kuozhan .weather .left{
+    height: 80px;
+    width: 80px;
+    padding: 5px;
+    float: left;
+}
+.head .left-right .left .kuozhan .weather .right{
+    margin: 0;
+    margin-left: 90px;
+    height: 90px;
+    width: auto;
+    
+}
+#weather1{
+    text-align: center;
+    height: 30px;
+    width: 80%;
+    font-size: 20px;
+}
+#temperature{
+    padding-left: 10px;
+    height: 30px;
+    width: 45%;
+    font-size: 18px;
+    float: left;
+}
+#humidity{
+
+    padding-left: 10px;
+    height: 30px;
+    width: 45%;
+    font-size: 18px;
+    float: left;
+}
+#wind{
+    padding-left: 10px;
+    height: 30px;
+    width: 45%; 
+    font-size: 18px;
+    float: left;
+
+}
+#windpower{
+    padding-left: 10px;
+    height: 30px;
+    width: 45%;
+    font-size: 18px;
+    float: left;
+}
+
+.head .left-right .right{
+    margin-left: calc(100% - 200px);
+    margin-right: 20px;
+    height: 200px;
+    width: 180px;
+
+    
+}
+.head .left-right .right img{
+    margin:20px;
+    border-radius:90%;
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+}
+
+
+.content{
+    background-color: white;
+    width: auto;
+    color: rgb(0, 0, 0);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+.content .zujian{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    background-color: rgb(244, 244, 244);
+}
+
+.content .zujian span{
+    font-size: 160%;
+    font-weight: 800;
+    padding-left: 10px;
+    color: rgb(39, 78, 136);
+}
+
+.line_content{
+    height: 2px;
+    background-color: rgb(74, 126, 198);
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-bottom: 5px ;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.content .zujian .line{    
+    height: 3px;
+    background-color: rgb(39, 78, 136);
+    border-radius: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px ;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.content .zujian .title{
+    width: 33.33%;
+    float: left;
+    text-align:start;
+    font-weight: 600;
+    font-size: 130%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.content .zujian .title0{
+    width: 33.33%;
+    padding-left: 30px;
+    float: left;
+    text-align:start;
+    font-weight: 600;
+    font-size: 130%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#star{
+    color: rgb(39, 78, 136);
+    font-size: 20px;
+}
+
+.content .zujian ul{
+    clear: left;
+}
+.content .zujian ul li{
+    font-weight: 350;
+    font-size: 100%;
+    list-style-type: disc;
+    margin-left: 20px;
+    word-wrap:break-word;
+    margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.input{
+    border-radius: 10px;
+}
+
+.head .left-right .left .name1{
+    margin-top: 10px;
+    margin-left: 20px;
+
+    font-weight: 400;
+    font-size: 140%;
+    display: inline-block;
+}
+
+
+.head .left-right .left .position1{
+    margin-left: 230px;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 130%;
+    display: inline-block;
+
+}
+
+
+.head .left-right .left .xiaobiao input{
+    height: 25px;
+    font-weight: 300;
+}
+
+
+#name{
+    height: 35px;
+    font-weight: 500;
+}
+
+#position{
+    height: 35px;
+    font-weight: 500;
+}
+
+.upphoto{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.photocontain{
+    position: absolute;
+    top: 30vh;
+    border-radius: 10px;
+    display: block;
+    height: 300px;
+    background: white;
+    padding: 20px;
+}
+
+.photocontain form button{
+    width: 20%;
+    font-size: 20px;
+    margin: 10px 14% 30px 14% ;
+}
+
+.context_buutton{
+    width: 0;
+    overflow: visible;
+}
+.change_context{
+    align-content: center;
+    margin-right: 20px;
+    float: right;
+    width: auto;
+    height: 100%;
+    color: rgb(39, 78, 136);
+    font-size: 90%;
+    font-weight: 600;
+    border-radius: 10px;
+    border: rgba(0,0,0,0.1) solid 1px;
+    background-color: rgb(248, 248, 248);
+}
+
+.change_context:hover{
+    margin-right: 20px;
+    float: right;
+    width: auto;
+    height: 100%;
+    color: rgb(39, 78, 136);
+    font-size: 90%;
+    font-weight: 600;
+    border-radius: 10px;
+    border: rgba(0,0,0,0.3) solid 1px;
+    background-color: rgb(227, 227, 227);
+}
+
+.alter{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.alter .ba{
+    position: absolute;
+    top: 30vh;
+    border-radius: 10px;
+    display: block;
+    height: 300px;
+    background: white;
+    padding: 20px;
+}
+
+.alter .ba p{
+    font-size: 50px;
+}
+
+.alter .ba button{
+    width: 60px;
+    height: 40px;
+}
+.alter .ba .ul .li tr td{
+    min-width: 30px;
+}

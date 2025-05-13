@@ -1,0 +1,168 @@
+<html>
+<head>
+<title>示例程序--用户管理</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8"> 
+<link rel="stylesheet" type="text/css" href="base.css" >
+<link rel="stylesheet" type="text/css" href="usermanage.css" >
+</head>
+<body onload="getUsers()">
+<div id="content">
+	<div id="searchBar">
+		<div id="searchinput">
+			<form>
+				<input type="text" id="sname" width="200" />
+				<input type="button" value="搜索" onclick="searchUser()"/>
+			</form>
+	    </div>
+	    <div id="addUser" >
+	    	<input type="button"  value="添加新用户" onclick="showUserInputPopup()"/>
+	    </div>
+	</div>
+	<div id="userlist">
+		<table id="usertable">
+			<tr><th width="15%">登录名</th><th width="15%">姓名</th><th width="25%">部门</th><th width="25%">最近登录IP</th><th width="20%">操作</th></th></tr>
+			
+		</table>
+	</div>
+	<div class="mask" id="mask">
+        <div class="addUserPopup" id="login">
+           <div class="inputuserinfo"> 登录名：<input type="text" id="login_name" /></div>
+           <div class="inputuserinfo">用户名：<input type="text"   id="username" /></div>
+           <div class="inputbutton"><input type="button"  value="取消" onclick="closePopup()"/> <input type="button"  value="添加" onclick="addUser()"/></div>
+        </div>
+    </div>
+
+
+</div>
+<script >
+	var mask = document.getElementById("mask");
+	var userlist,users;
+	var httpRequest;
+	function showUserInputPopup(){
+	    mask.style.display = "block";	    
+	}	 
+	function closePopup(){
+		mask.style.display = "none";
+	}
+	
+	function getUsers(sname){	
+	     httpRequest= new XMLHttpRequest();
+        httpRequest.onreadystatechange = showUsers;
+        let url="getUserList?sname="+sname;
+        console.log(url);
+        httpRequest.open('GET', "getUserList");
+        httpRequest.send();
+        
+	}
+	function showUsers(){
+		if (httpRequest.readyState === XMLHttpRequest.DONE) {
+          if (httpRequest.status === 200) {
+            console.log(httpRequest.responseText);
+            let userlist=JSON.parse(httpRequest.responseText);
+            console.log(userlist);
+            let users=userlist["userList"];
+            console.log(users);
+            
+     
+            for(var i=0;i<users.length;i++){
+             	var userline=document.createElement("tr");
+             	var userlineHTML;
+             	var user_id,login_name,username,department,last_login_ip;
+             	user_id=users[i]["id"]==undefined ? "":users[i]["id"];
+             	login_name=users[i]["login_name"]==undefined ? "":users[i]["login_name"];
+             	username=users[i]["username"]==undefined ? "":users[i]["username"];
+             	department=users[i]["department"]==undefined ? "":users[i]["department"];
+             	last_login_ip=users[i]["last_login_ip"]==undefined ? "":users[i]["last_login_ip"];
+
+             	userlineHTML="<td style='display:none'>"+user_id+"</td><td>"+login_name+"</td><td>"+username+"</td><td>"+department+"</td><td>"+last_login_ip+"</td><td onclick='deleteUser(this)'>删除</td>"
+            	console.log(userlineHTML);
+            	userline.innerHTML=userlineHTML;
+            	document.getElementById("usertable").appendChild(userline);
+            }
+
+         
+          } else {
+            alert(httpRequest.responseText);
+          }
+        }		
+	}
+	function addUser(){
+		var login_name,username;
+		var url;
+		login_name=document.getElementById("login_name").value;
+		username=document.getElementById("username").value;
+		console.log(login_name);
+		console.log(username);
+		if(login_name.length>0 && username.length>0){
+			httpRequest= new XMLHttpRequest();
+	        httpRequest.onreadystatechange = addUserResult;
+            url="insertUser?login_name="+login_name+"&username="+username;
+            console.log(url);
+	        httpRequest.open('GET', url);
+	        httpRequest.send();
+	    }else{
+	    	alert("请填写完整信息")
+	    }
+	}
+	function addUserResult(){
+		var rtn;
+		if (httpRequest.readyState === XMLHttpRequest.DONE) {
+          if (httpRequest.status === 200) {
+				console.log(httpRequest.responseText);
+		        rtn=JSON.parse(httpRequest.responseText);
+		        if (rtn["rtn"]["result"]=="OK"){
+		           alert("添加成功");
+		           closePopup();
+		          
+
+		          
+		        }else{
+		           alert(rtn["result"])
+		        }
+		    }
+		}
+
+	}
+	function deleteUser(obj){
+		var user_id
+		var url;
+    if (confirm("是否删除当前行数据？")==false) return false;
+		user_id=obj.parentNode.firstChild.innerText;
+		console.log(user_id);
+		if(user_id.length>0){
+			httpRequest= new XMLHttpRequest();
+			httpRequest.onreadystatechange = deleteUserResult;
+	        url="deleteUser?user_id="+user_id;
+            console.log(url);
+	        httpRequest.open('GET', url);
+	        httpRequest.send(true);
+	        if (httpRequest.status === 200){
+	        	obj.parentNode.parentNode.removeChild(obj.parentNode);//deleteRow(obj.parentNode.rowIndex);
+	        }
+	    obj.parentNode.parentNode.removeChild(obj.parentNode);    
+	    }else{
+	    	alert("请填写完整信息")
+	    }
+	}
+	function deleteUserResult(){
+		var rtn,userTable;
+		if (httpRequest.readyState === XMLHttpRequest.DONE) {
+          if (httpRequest.status === 200) {
+				console.log(httpRequest.responseText);
+		        rtn=JSON.parse(httpRequest.responseText);
+		        if (rtn["rtn"]["result"]=="OK"){		        	        	
+		           alert("删除成功");		       
+		        }else{
+		           alert(rtn["rtn"]["result"])
+		        }
+		    }
+		}
+	}
+   function 	searchUser() {
+   	 let sname=document.getElementById("sname").value;
+   	 getUsers(sname);
+
+   }
+</script>
+</body>
+</html>

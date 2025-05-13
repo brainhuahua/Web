@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="icon" href="img/胡萝卜.png" type="image/png">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="font/iconfont/iconfont.css">
+    <link rel="stylesheet" href="font/weather-font/iconfont.css">
+    <script src="font/weather-font/iconfont.js"></script>
+    
+</head>
+
+<body>
+<form action="/WebServlet/renew" method="post" >
+    <div class="head">
+        <div class="head">
+            <span class="iconfont icon-resume-line">
+                个人简历-编辑页面
+            </span>
+            <button type="submit" class="change" > 保存 </button>
+            <button type="button" class="change" onclick="ret()" > 返回 </button>
+        </div>
+        <div class="left-right">
+
+            <div class="left">
+
+                <div class="name1">
+                    名字: <label for="name"></label><input  id="name" name="name">
+                </div>
+                <div class="position1">
+                    意向职位: <label for="position"></label><input  id="position" name="position">
+                </div>
+
+                <div class="kuozhan">
+                    <div class="weather">
+                        <div class="weather-head">
+                            
+                        </div>
+                        <div class="left">
+                            <svg class="icon" aria-hidden="true">
+                                <use id="weather-icon" xlink:href=""></use>
+                              </svg>
+                        </div>
+                        
+                        <div class="right">
+                            <div id="weather1">                               
+                            </div>
+                            <div id="temperature">                           
+                            </div>
+                            <div id="humidity">                             
+                            </div>                                              
+                            <div id="wind">                              
+                            </div>
+                            <div id="windpower">                           
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <script type="text/javascript" src="scripts/weather.js"></script>
+
+                </div>
+
+                <div class="xiaobiao">
+                    <span class="iconfont icon-dizhi">
+                        地址: <label for="address"></label><input id="address" name="address">
+                    </span>
+                    <span class="iconfont icon-calendar-v2">
+                        生日: <label for="birth"></label><input id="birth" name="birth">
+                    </span>
+                    <span class="iconfont icon-dianhua">
+                        电话: <label for="tel"></label><input id="tel" name="tel">
+                    </span>
+                    <span class="iconfont icon-youxiang">
+                        邮箱: <label for="email"></label><input id="email" name="email">
+                    </span>
+                </div>
+
+                
+            </div>
+
+            <div class="right">
+                <img id="head" src="img/head.png" onclick="openphoto()">
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <div class="content">
+        <div class="zujian">
+            <span class="iconfont icon-jiaoyu">
+                教育经历
+                <button class="change_context" type="button" onclick=""> 编辑 </button>
+            </span>
+            <div class="line"></div>
+
+            <p class="title">2022-至今 </p>
+            <p class="title">中南大学 </p>
+            <p class="title">数据科学与大数据技术</p>
+            <ul>
+                <li>
+                    中南大学（Central South University，英文缩写为CSU），位于湖南省长沙市，是中华人民共和国
+                    教育部直属的全国重点大学，中央直管高校。是国家“211工程”首批重点建设高校，国家“985工程”部省重点共建
+                    高水平大学、国家“2011计划”首批牵头高校。
+                </li>
+                <li>
+                    数据科学与大数据技术是第一批获国家批准设立的三个高校之一，建有完善的大数据专业教学平台，依托医疗大数据应用技术国家工程实验室、
+                    湖南省医学大数据协同创新中心、中南大学湘雅大数据科研平台、轨道交通大数据科研平台、有色金属工业领域大数据科研团队力量实施人才培养，
+                    并与知名IT公司建有校企人才合作培养基地。
+                </li>
+            </ul>
+
+            <div class="line_content"></div>
+            <p class="title">2019-2022 </p>
+            <p class="title">安徽省青阳中学 </p>
+            <p class="title"></p>
+            <ul>
+                <li>
+                    安徽省青阳中学位于皖南九华山麓、青通河畔，它创办于1923年8月，1962年被确定为地区重点中学，
+                    1964年郭沫若副委员长亲笔为青阳中学题写校名，是一所具有爱国传统和深厚文化底蕴的江南名校。
+                    2003年初被省教育厅命名为“安徽省省级示范性普通高中”。
+                </li>
+            </ul>
+
+            <div class="line_content"></div>
+            <p class="title">2016-2019 </p>
+            <p class="title">九子山公学 </p>
+            <p class="title"></p>
+            <ul>
+                <li>
+                    安徽九子山教育始创于2006年，办学十多年来，在市、县教育主管部门的关心与领导下，开拓进取、砥砺前行，办学规模不断壮大，
+                    教育质量稳步提升。九子山教育以其办学理念新、师资力量强、教学质量高、学生发展好而在社会各界中享有很高声誉。
+                </li>
+            </ul>
+
+            <div class="line_content"></div>
+            <p class="title">2011-2016 </p>
+            <p class="title">上海市封浜小学 </p>
+            <p class="title"></p>
+            <ul>
+                <li>
+                    封浜小学创建于1911年，在新华村梅园添祯堂内开办添桢初级小学（天真小学前身）。抗战期间，天真小学初具规模，成为完全小学。
+                    1951年，天真小学迁入沈家祠堂。1954年9月，由县教育局更名为天真中心小学校。1958年9月，建制设立封浜中心小学校区。
+                    1987年7月，封浜中心校迁入新址，下设有多所村校。1991年2月，为适应封浜地区小学生源入学需求，封浜中心校迁入现址办学至今。
+                    2006年6月，封浜中心校正式更名为上海市嘉定区封浜小学。2012年7、8月，学校进行了校安工程，9月以全新面貌投入使用。
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div class="zujian">
+            <span class="iconfont icon-shixijingli">
+                工作经验
+                <button class="change_context" type="button" onclick=""> 编辑 </button>
+            </span>
+
+            <div class="line"></div>
+            <p class="title">2024-至今 </p>
+            <p class="title">中南大学计算机学院团委学生会 </p>
+            <p class="title">学生会主席</p>
+            <ul>
+                <li>
+                    在担任学生会主席的职位时，我全面负责学生会的日常管理与事务，协调各部门之间的工作，确保各项活动的顺利进行。
+                    同时，我还关注同学们的意见与需求，积极推动改善校园环境与服务，为学生群体争取更多的权益和资源。
+                </li>
+                <li>
+                    我主导了多次校园大型活动的策划和执行，如迎新晚会、社会实践项目等，进一步提升了学生会的影响力和凝聚力。
+                </li>
+                <li>
+                    同时，我还关注同学们的意见与需求，积极推动改善校园环境与服务，为学生群体争取更多的权益和资源。
+                </li>
+            </ul>
+
+            <div class="line_content"></div>
+            <p class="title">2023-2024 </p>
+            <p class="title">中南大学计算机学院团委学生会 </p>
+            <p class="title">生活权益部部长</p>
+            <ul>
+                <li>
+                    在担任学生会生活部部长期间，我负责组织和策划各类校园生活相关活动，致力于提高同学们的生活质量和校园体验。
+                    通过与团队成员的紧密合作，我们成功举办了多项包括宿舍文化节、健康生活周等活动，积极促进了学生之间的互动与校园文化的建设。
+                    在此过程中，我不仅提高了自己的组织能力和沟通技巧，也深刻理解了团队协作的重要性。
+                </li>
+                <li>
+                    通过与团队成员的紧密合作，我们成功举办了多项包括宿舍文化节、健康生活周等活动，积极促进了学生之间的互动与校园文化的建设。
+                </li>
+                <li>
+                    在此过程中，我不仅提高了自己的组织能力和沟通技巧，也深刻理解了团队协作的重要性。
+                </li>
+            </ul>
+
+        </div>
+
+
+
+
+        <div class="zujian">
+            <span class="iconfont icon-zhuanyezhishijineng">
+                知识技能
+                <button class="change_context" type="button" onclick=""> 编辑 </button>
+            </span>
+            <div class="line"></div>
+            <p class="title0">编程语言</p>
+            <p class="title0"><span id="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span></p>
+            <ul>
+                <li>
+                    熟练掌握多种编程语言，包括C/C++、Java、Python等，能够高效解决实际问题。对数据结构与算法有深入理解，具备较强的编程能力和问题分析能力。
+                </li>
+            </ul>
+
+            <div class="line_content"></div>
+            <p class="title0">操作系统与计算机网络</p>
+            <p class="title0"><span id="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span></p>
+            <ul>
+                <li>
+                    熟悉Linux操作系统及常见的命令行操作，掌握基本的系统管理技能。
+                </li>
+                <li>
+                    对计算机网络有一定了解，能够进行基本的网络编程与调试。
+                </li>
+            </ul>
+
+            <div class="line_content"></div>
+            <p class="title0">数据库管理</p>
+            <p class="title0"><span id="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span></p>
+            <ul>
+                <li>
+                    熟悉常用的数据库管理系统，如MySQL、SQLServer、Oracle等，具备数据库设计、查询优化与数据维护的基本能力。
+                </li>
+            </ul>
+
+            <div class="line_content"></div>
+            <p class="title0">软件工程</p>
+            <p class="title0"><span id="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span></p>
+            <ul>
+                <li>
+                    熟悉软件开发流程，了解敏捷开发与版本控制工具（如Git），能够参与团队开发并进行代码管理与协作。
+                </li>
+            </ul>
+
+            <div class="line_content"></div>
+            <p class="title0">人工智能与机器学习</p>
+            <p class="title0"><span id="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span></p>
+            <ul>
+                <li>
+                    对人工智能和机器学习有基础的理论和实践经验，熟悉常用的机器学习算法和框架（如TensorFlow、PyTorch），能进行基础的数据分析和模型训练。
+                </li>
+            </ul>
+
+            <div class="line_content"></div>
+            <p class="title0">编程语言</p>
+            <p class="title0"><span id="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span></p>
+            <ul>
+                <li>
+                    掌握前端技术（如HTML、CSS、JavaScript、Vue3和Uniapp）和后端开发（如jsp和Servlet），能够进行Web应用开发。
+                </li>
+            </ul>
+
+            <div class="line_content"></div>
+            <p class="title0" >项目管理与团队合作</p>
+            <p class="title0"><span id="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span></p>
+            <ul>
+                <li>
+                    具备一定的项目管理经验，在团队中有较强的协作能力，能有效沟通并推动项目进展，注重代码质量与团队效率。
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div class="zujian">
+            <span class="iconfont icon-huojiang">
+                获奖及证书
+            </span>
+            <div class="line"></div>
+            <p class="title">2023-2024 </p>
+            <p class="title">中南大学 </p>
+            <p class="title">国家级</p>
+            <ul>
+                <li>
+                    2023-2024学年国家励志奖学金
+                </li>
+            </ul>
+
+
+            <div class="line_content"></div>
+            <p class="title">2023-2024 </p>
+            <p class="title">中南大学 </p>
+            <p class="title">校级</p>
+            <ul>
+                <li>
+                    中南大学2023-2024优秀学生干部
+                </li>
+                <li>
+                    中南大学2023-2024学年度学生会工作积极分子
+
+                </li>
+                <li>
+                    中南大学2023-2024学年奖学金二等奖
+                </li>
+            </ul>
+
+
+            <div class="line_content"></div>
+            <p class="title">2022-2023 </p>
+            <p class="title">中南大学 </p>
+            <p class="title">国家级</p>
+            <ul>
+                <li>
+                    2022-2023学年国家励志奖学金
+                </li>
+            </ul>
+
+            <div class="line_content"></div>
+            <p class="title">2022-2023 </p>
+            <p class="title">中南大学 </p>
+            <p class="title">校级</p>
+            <ul>
+                <li>
+                    中南大学2022-2023学年优秀学生
+                </li>
+                <li>
+                    中南大学2022-2023学年奖学金二等奖
+                </li>
+            </ul>
+
+
+        </div>
+
+        <div class="zujian">
+            <span class="iconfont icon-ziwopingjia">
+                自我评价
+                <button class="change_context" type="button" onclick="openedit()"> 编辑 </button>
+            </span>
+            <div class="line"></div>
+            <ul>
+                <li>
+                    中南大学2023-2024优秀学生干部
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</form>
+
+<div class="upphoto">
+
+    <div class="photocontain">
+        <form action="/WebServlet/photoupload" enctype="multipart/form-data" method="post" name="form1" id="form1">
+            <div></div>
+            文件：<input type="file" name="myFile" id="myFile" onchange="getFileContent();" multiple>
+            <!-- 进度条 -->
+            <div style="display: flex;justify-content: center;margin: 20px;max-height: 200px;overflow: hidden">
+                <img style="width: 200px" src="img/head.png">
+            </div>
+
+            <button type="submit">提交</button>
+            <button type="button" onclick="closephoto()">取消</button>
+        </form>
+    </div>
+
+</div>
+
+<div class="alter">
+    <div class="ba">
+        <p class="font-weight=10px">自我评价</p>
+        <ol>
+
+        </ol>
+        <label>编号</label><input id="alterId">
+        <label>内容</label><input id="alterContent">
+        <button type="button" onclick="alterAdd()">增加</button>
+        <button type="button" onclick="alter()">修改</button>
+        <button type="button" onclick="alterDelete()">删除</button>
+        <button type="button" onclick="closeba()">返回</button>
+    </div>
+</div>
+
+
+</body>
+<script type="text/javascript" src="scripts/edit.js"> </script>
+
+</html>
